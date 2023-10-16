@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { AddTodo } from "../features/todo/todoSlice";
+import { addTodo } from "../features/todo/todoSlice";
 
 const AddTodo = () => {
   const [input, setInput] = useState();
@@ -8,7 +8,7 @@ const AddTodo = () => {
   // add event handler information send
   const addTodoHandler = (e) => {
     e.preventDefault();
-    dispatch(AddTodo(input));
+    dispatch(addTodo(input));
     setInput();
   };
 
